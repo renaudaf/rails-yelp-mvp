@@ -1,9 +1,11 @@
-<h1><%=@restaurant.name %></h1>
-
+<div class="show-container">
   <div class="restaurant">
+  <h1><%=@restaurant.name %></h1>
     <p><%= @restaurant.address  %></p>
     <p><%= @restaurant.phone_number  %></p>
     <p><%= @restaurant.category  %></p>
   </div>
-
-<%= link_to  "Home", restaurants_path %>
+  <div class="link-container">
+    <a class="btn btn-primary" href="/restaurants" role="button">Home</a>
+  </div>
+</div>
