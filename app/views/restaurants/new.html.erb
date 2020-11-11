@@ -1,0 +1,16 @@
+<div class="container">
+ <h1>Add a new restaurant</h1>
+ <%= simple_form_for(@restaurant) do |f| %>
+   <%= f.input :name %>
+   <%= f.input :address %>
+   <%= f.input :phone_number %>
+   <%= f.input :category, type: 'select', collection: ["Chinese", "Italian", "Japanese", "French", "Belgian"] %>
+  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+    <i class="icon-ok icon-white"></i> Create Restaurant
+  <% end %>
+ <% end %>
+
+   <div class="link-container">
+    <a class="btn btn-primary" href="/restaurants" role="button">Home</a>
+  </div>
+</div>
